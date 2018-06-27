@@ -2,3 +2,4 @@ base:
   '*':
     - nagios
     - syslog
+    - docker
