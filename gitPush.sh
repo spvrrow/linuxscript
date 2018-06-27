@@ -1,16 +1,6 @@
-echo -e "
-*************************************************
-*************************************************
-"
-read -p "Bericht: " BERICHT 
-echo -e "
-*************************************************
-*************************************************
-"
-git add .
-git commit -m $BERICHT
-echo " ________________________________________ "
-echo "|Gebruikersnaam en Wachtwoord alstublieft|"
-echo "|________________________________________|"
+read -p "Comment: " COMMENT 
+
+git add ~/git
+git commit -m $COMMENT
 git push origin master
 
