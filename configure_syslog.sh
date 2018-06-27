@@ -1,3 +1,6 @@
+# Backup original file
+sudo cp /etc/rsyslog.conf /etc/rsyslog.conf.orig
+
 # Remove comments in rsyslog.conf
 sudo sed -i -e 's/#module(load="imudp")/module(load="imudp")/g' /etc/rsyslog.conf
 sudo sed -i -e 's/#input(type="imudp" port="514")/input(type="imudp" port="514")/g' /etc/rsyslog.conf
