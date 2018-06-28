@@ -1,12 +1,15 @@
 python-pip:
   pkg.installed
 
-docker-py:
-  pip.installed:
-    - require:
-      - pkg: python-pip
+docker-compose:
+    pip.installed:
+      - force_reinstall: True
+      - upgrade: True
+      - no_cache_dir: True
+      - require:
+        - pkg: python-pip
 
-docker-repository:
+docker_repository:
   pkgrepo.managed:
     - humanname: Docker
     - name: deb http://download.docker.com/linux/ubuntu xenial stable
